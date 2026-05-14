@@ -44,6 +44,7 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
+        aidl = true
     }
 }
 kotlin {
@@ -66,6 +67,8 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
 
     implementation(libs.coil.compose)
+
+    implementation(libs.timber)
 
 
     testImplementation(libs.junit)

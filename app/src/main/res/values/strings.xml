@@ -3,6 +3,10 @@
     <string name="contacts_empty">Контакты не найдены</string>
     <string name="contacts_error">Ошибка загрузки: %s</string>
     <string name="contact_name_stub">"?"</string>
-    <string name="error_no_dial_app">Приложение для звонков не найдено</string>
+    <string name="delete_duplicates">Удаление дублирующихся контактов</string>
+    <string name="delete_processing">Удаление выполняется...</string>
+    <string name="duplicates_deleted">Удалено %s</string>
+    <string name="duplicates_deleted_failed">Удаление не выполнено</string>
     <string name="contacts_permission_denied">Разрешение на чтение контактов не предоставлено</string>
+    <string name="duplicates_not_found">Дублирующиеся контакты не найдены</string>
 </resources>

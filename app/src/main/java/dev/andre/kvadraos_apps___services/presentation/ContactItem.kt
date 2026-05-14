@@ -1,6 +1,5 @@
 package dev.andre.kvadraos_apps___services.presentation
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -19,11 +18,10 @@ import dev.andre.kvadraos_apps___services.domain.model.Contact
 import dev.andre.kvadraos_apps___services.presentation.util.buildInitials
 
 @Composable
-fun ContactItem(contact: Contact, onClick: (Contact) -> Unit) {
+fun ContactItem(contact: Contact) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick(contact) }
             .padding(horizontal = 16.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {

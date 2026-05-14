@@ -12,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import dev.andre.kvadraos_apps___services.presentation.util.launchDialIntent
 import dev.andre.kvadraos_apps___services.presentation.state.ContactsEmpty
 import dev.andre.kvadraos_apps___services.presentation.state.ContactsError
 import dev.andre.kvadraos_apps___services.presentation.state.ContactsLoading
@@ -42,11 +43,20 @@ fun ContactsScreen(viewModel: ContactsViewModel = hiltViewModel()) {
         }
     }
 
+    LaunchedEffect(viewModel.events) {
+        viewModel.events.collect { event ->
+            when (event) {
+                is ContactsEvent.NavigateToCall ->
+                    launchDialIntent(context, event.phone)
+            }
+        }
+    }
+
     when (val s = state) {
         is ContactsState.Loading -> ContactsLoading()
         is ContactsState.Success -> {
             if (s.contacts.isEmpty()) ContactsEmpty()
-            else ContactList(s.contacts, {})
+            else ContactList(s.contacts, viewModel.onContactClick)
         }
         is ContactsState.Failure -> ContactsError(s.message)
         is ContactsState.Idle -> ContactsLoading()

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">kvadraOS_Apps___Services</string>
+    <string name="contacts_empty">Контакты не найдены</string>
+    <string name="contacts_error">Ошибка загрузки: %s</string>
+    <string name="contact_name_stub">"?"</string>
+    <string name="error_no_dial_app">Приложение для звонков не найдено</string>
+    <string name="contacts_permission_denied">Разрешение на чтение контактов не предоставлено</string>
 </resources>

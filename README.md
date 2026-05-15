@@ -3,6 +3,6 @@
 
 В ветке:
 - kvadraOS_Apps___ServicesV1: вариант 1
-- kvadraOS_Apps___ServicesV2: вариант 2
+- Идентичен третьему варианту. Можно посмотреть в kvadraOS_Apps___ServicesV3: вариант 2
 - kvadraOS_Apps___ServicesV3: вариант 3
 - kvadraOS_Apps___ServicesV4: вариант 4

@@ -24,6 +24,14 @@ fun showToast(context: Context, message: String) {
     Toast.makeText(context, message.trim(), Toast.LENGTH_SHORT).show()
 }
 
+fun normalizePhone(phone: String): String {
+    return phone
+        .replace("\\s".toRegex(), "")
+        .replace("-", "")
+        .replace("(", "")
+        .replace(")", "")
+}
+
 fun buildInitials(name: String): String = name.trim()
     .split(" ")
     .filter { it.isNotEmpty() }

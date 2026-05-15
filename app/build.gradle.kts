@@ -33,6 +33,15 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+        freeCompilerArgs += listOf("-Xjvm-default=all-compatibility")
+    }
+    tasks.withType<JavaCompile> {
+        options.encoding = "UTF-8"
+    }
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions {
+            jvmTarget = "11"
+        }
     }
     buildFeatures {
         compose = true
